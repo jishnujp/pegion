@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+
+ip=$(curl ifconfig.me)
+if [ $? -ne 0 ] ; then
+	echo -e "\n\tThere is a connectivity problem.."
+	exit 1
+fi
+
+echo -e "\n\t--------------------------------------"
+echo -e "\t         Pegion Messenger             "
+echo -e "\t--------------------------------------"
+echo -e "\tYour Address is $ip"
+echo -e "\t--------------------------------------\n"
+
+if [ -z "$1" ]; then
+	read -p  "        Enter your friend's ip: " dip
+	python3 p2p.py $dip
+else
+	python3 p2p.py $1
+fi
