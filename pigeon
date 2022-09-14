@@ -8,7 +8,7 @@ if [ $? -ne 0 ] ; then
 fi
 
 echo -e "\n\t--------------------------------------"
-echo -e "\t         Pegion Messenger             "
+echo -e "\t         Pigeon Messenger             "
 echo -e "\t--------------------------------------"
 echo -e "\tYour Address is $ip"
 echo -e "\t--------------------------------------\n"
